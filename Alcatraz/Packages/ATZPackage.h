@@ -34,6 +34,7 @@
 @property (strong, nonatomic) NSString *remotePath;
 @property (strong, nonatomic) NSString *revision;
 @property (strong, nonatomic) NSString *screenshotPath;
+@property (strong, nonatomic) NSString *xcprojectName;
 @property (nonatomic, readonly) NSString *website;
 @property (nonatomic, readonly) NSString *extension;
 @property (nonatomic, readonly) BOOL isInstalled;

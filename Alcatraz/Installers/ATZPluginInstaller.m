@@ -124,7 +124,8 @@ static NSString *const PROJECT_PBXPROJ = @"project.pbxproj";
 
 - (NSString *)findXcodeprojPathForPlugin:(ATZPlugin *)plugin {
     NSString *clonedDirectory = [self pathForDownloadedPackage:plugin];
-    NSString *xcodeProjFilename = [plugin.name stringByAppendingString:XCODEPROJ];
+    NSString *projectName = plugin.xcprojectName ? plugin.xcprojectName : plugin.name;
+    NSString *xcodeProjFilename = [projectName stringByAppendingString:XCODEPROJ];
     
     NSDirectoryEnumerator *enumerator = [[NSFileManager sharedManager] enumeratorAtPath:clonedDirectory];
     NSString *directoryEntry;

@@ -42,6 +42,7 @@
     [_description release];
     [_remotePath release];
     [_screenshotPath release];
+    [_xcprojectName release];
     [super dealloc];
 }
 
@@ -63,6 +64,7 @@
     self.description = dictionary[@"description"];
     self.remotePath = dictionary[@"url"];
     self.screenshotPath = dictionary[@"screenshot"];
+    self.xcprojectName = dictionary[@"project name"];
     self.xcodeVersion = dictionary[@"xcode_version"];
     self.revision = [ATZGit parseRevisionFromDictionary:dictionary];
 }
